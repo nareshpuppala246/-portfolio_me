@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naresh Puppala - Firmware Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Optional: Define accent color variable for easy changes */
+      :root {
+        --accent-color: #3b82f6; /* Tailwind's blue-500 */
+        --accent-color-dark: #2563eb; /* Tailwind's blue-600 */
+      }
+      .text-accent {
+        color: var(--accent-color);
+      }
+      .bg-accent {
+        background-color: var(--accent-color);
+      }
+      .hover\:bg-accent-dark:hover {
+        background-color: var(--accent-color-dark);
+      }
+      .border-accent {
+        border-color: var(--accent-color);
+      }
+
+      .fade-in {
+     animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+         .skill-badge {
+    @apply inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded-full text-sm font-medium hover:bg-accent hover:text-white transition;
+  }
+      /* Style for active nav link (optional) */
+      /* .nav-link-active { color: var(--accent-color); font-weight: 600; } */
+
+      /* Ensure content doesn't hide behind sticky header */
+      body {
+        padding-top: 4rem; /* Adjust if header height changes */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 h-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="flex justify-between items-center h-full">
+          <div class="flex-shrink-0">
+            <a
+              href="#home"
+              class="text-2xl font-bold text-gray-900 hover:text-accent transition duration-300"
+              >Naresh Puppala</a
+            >
+          </div>
+
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >Skills</a
+            >
+            <a
+              href="#experience"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >Experience</a
+            >
+            <a
+              href="#gallery"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >Gallery</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-accent transition duration-300"
+              >Contact</a
+            >
+          </nav>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="hamburger-button"
+              class="text-gray-600 hover:text-accent focus:outline-none focus:text-accent"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white shadow-lg absolute top-16 left-0 right-0 pb-4"
+      >
+        <nav class="flex flex-col items-center space-y-4 px-4 pt-4">
+          <a
+            href="#home"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >Experience</a
+          >
+          <a
+            href="#gallery"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >Gallery</a
+          >
+          <a
+            href="#contact"
+            class="block text-gray-600 hover:text-accent transition duration-300 mobile-nav-link"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+  <section id="home" class="bg-white py-20 md:py-32 fade-in">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+        Hi, I'm <span class="text-accent">Naresh Puppala</span>
+      </h1>
+      <h2 class="text-2xl sm:text-3xl text-gray-700 mt-3">Firmware Engineer</h2>
+      <p class="text-lg text-gray-600 mt-6">
+        <!-- Embedded Systems Engineer with 6+ years of experience in developing reliable firmware for industrial and smart devices. Adept at integrating low-power sensors and optimizing system performance. Proficient in C, Python, and Controllers  like STM32, ESP, and Infineon. -->
+        Experienced Firmware Engineer with 6+ years in developing firmware for smart and industrial devices. Skilled in low-power sensor integration, system optimization, and real-time embedded development. Proficient in C, C++, Python, and working with STM32, ESP,Arduino and Infineon Microcontrollers.      </p>
+      <div class="mt-8 flex justify-center space-x-6">
+          <a href="https://www.linkedin.com/in/naresh-puppala-FirmwareEngineer/" target="_blank" class="relative group">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow hover:shadow-lg transition">
+              <i class="fab fa-linkedin text-blue-600 text-2xl"></i>
+            </div>
+          </a>
+        <span class="absolute top-0 right-0 block w-3 h-3 bg-red-500 rounded-full ring-2 ring-white"></span>
+      </a>
+      <a href="https://github.com/nareshpuppala246" target="_blank" class="relative group">
+        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow hover:shadow-lg transition">
+          <i class="fab fa-github text-gray-800 text-2xl"></i>
+        </div>
+      </a>
+      <a href="mailto:nareshpuppala246@gmail.com" target="_blank" class="relative group">
+        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow hover:shadow-lg transition">
+          <i class="fas fa-envelope text-accent text-2xl"></i>
+        </div>
+      </a>
+ 
+      </div>
+
+      <!-- Call-to-Action Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="#contact" class="bg-accent text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-accent-dark transition text-center">
+          Contact Me
+        </a>
+        <a href="#projects" class="bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-300 transition text-center">
+          View Projects
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <section id="about" class="bg-gray-100 py-20 md:py-28">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12"
+          >
+            About Me
+          </h2>
+          <div class="max-w-3xl mx-auto text-center md:text-left">
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+              I'm Naresh Puppala, a Firmware Engineer with a strong focus on embedded systems where hardware and 
+              software work together. I enjoy building reliable and efficient firmware for microcontrollers and IoT devices,
+               especially those that need to run on low power.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+              I have solid experience in C, C++, Python, and real-time operating systems like FreeRTOS. I’m also skilled in PCB design and hardware testing,
+               giving me a complete view of the development process—from idea to final product.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              My work includes designing robust firmware, debugging hardware issues, and making sure everything works smoothly together. I’ve worked on projects like a large-scale Smart Payphone System and a 
+              Smart Mailbox with sensors, where I aim to deliver smart, connected, and dependable solutions
+               
+
+
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class=" bg-white py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12" data-aos="fade-up">
+      Projects
+    </h2>
+
+    <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Project 1 -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition p-6" data-aos="fade-up">
+        <div class="flex items-center mb-3 text-accent text-xl">
+          <i class="fas fa-phone-alt mr-2"></i>
+          <h3 class="font-semibold text-gray-800 text-lg">
+            Smart Payphone System (RFID + GSM)
+          </h3>
+        </div>
+        <p class="text-base text-gray-600 mb-4">
+          Designed a prepaid GSM payphone system for remote areas. Users authenticate with RFID cards; charges are calculated in real-time and deducted from card balance. Enables secure communication without traditional landlines.
+        </p>
+        <div class="text-sm text-gray-500 font-medium">Tech Stack:</div>
+        <ul class="list-disc list-inside text-gray-500 text-base mt-1">
+          <li>STM32, C/C++</li>
+          <li>RFID Module, GSM (EC200CN)</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-3 text-accent text-xl">
+          <i class="fas fa-bolt mr-2"></i>
+          <h3 class="font-semibold text-gray-800 text-lg">
+            AI Smart Home Energy Optimizer
+          </h3>
+        </div>
+        <p class="text-base text-gray-600 mb-4">
+          Built a home automation system with real-time energy usage tracking and AI-based optimization. Automatically schedules heavy appliances during off-peak hours to reduce costs. Managed via a mobile dashboard.
+        </p>
+        <div class="text-sm text-gray-500 font-medium">Tech Stack:</div>
+        <ul class="list-disc list-inside text-gray-500 text-base mt-1">
+          <li>ESP32, Python, Firebase</li>
+          <li>Current Sensors, MQTT</li>
+          <li>AI Optimization with ML Model</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition p-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-3 text-accent text-xl">
+          <i class="fas fa-seedling mr-2"></i>
+          <h3 class="font-semibold text-gray-800 text-lg">
+            Smart Farming & Crop Monitoring
+          </h3>
+        </div>
+        <p class="text-base text-gray-600 mb-4">
+          Developed a sensor-driven IoT system for soil, temperature, and humidity monitoring. Farmers can control irrigation remotely, and historical data aids in yield optimization. Weather APIs used for AI-based scheduling.
+        </p>
+        <div class="text-sm text-gray-500 font-medium">Tech Stack:</div>
+        <ul class="list-disc list-inside text-gray-500 text-base mt-1">
+          <li>ESP32/Arduino, C/Python</li>
+          <li>Soil & Temp Sensors, Camera</li>
+          <li>Weather APIs, Mobile UI</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  
+ <section id="skills" class="bg-gray-100 py-20">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12" data-aos="fade-up">
+      Skills &amp; Expertise
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Microcontrollers -->
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-microchip mr-2"></i>Microcontrollers (MCUs)
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">ESP32 (S3/C3)</span>
+          <span class="skill-badge">STM32F4/H7</span>
+          <span class="skill-badge">ATMega328P</span>
+          <span class="skill-badge"> ATtiny</span>
+          <span class="skill-badge">Infineon Boards</span>
+          <span class="skill-badge">Raspberry Pi</span>
+          <span class="skill-badge">BeagleBone</span>
+        </div>
+      </div>
+
+      <!-- Protocols -->
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-network-wired mr-2"></i>Protocols & Connectivity
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">UART</span>
+          <span class="skill-badge">SPI</span>
+          <span class="skill-badge">I2C</span>
+          <span class="skill-badge">CAN</span>
+          <span class="skill-badge">Modbus</span>
+          <span class="skill-badge">BLE</span>
+          <span class="skill-badge">Wi-Fi</span>
+          <span class="skill-badge">LoRa</span>
+          <span class="skill-badge">Zigbee</span>
+        </div>
+      </div>
+
+      <!-- Programming -->
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-code mr-2"></i>Programming & RTOS
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">C</span>
+          <span class="skill-badge">Embedded C</span>
+          <span class="skill-badge">C++</span>
+          <span class="skill-badge">HTML,CSS</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">FreeRTOS</span>
+          <span class="skill-badge">SQL</span>
+        </div>
+      </div>
+
+      <!-- Development Tools -->
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-tools mr-2"></i>Development & Debugging Tools
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">STM32CubeIDE</span>
+          <span class="skill-badge">Arduino IDE</span>
+          <span class="skill-badge">ESP-IDF</span>
+          <span class="skill-badge">Eclipse</span>
+          <span class="skill-badge">VS Code</span>
+          <span class="skill-badge">Putty</span>
+          <span class="skill-badge">TeraTerm</span>
+          <span class="skill-badge">Wireshark</span>
+          <span class="skill-badge">Oscilloscope</span>
+          <span class="skill-badge">Logic Analyzer</span>
+          <span class="skill-badge">Multimeter</span>
+          <span class="skill-badge">Power Profiler</span>
+      
+
+
+
+        </div>
+      </div>
+
+      <!-- Version Control -->
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-code-branch mr-2"></i>Version Control & Project Management
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">Git, GitHub, Bitbucket</span>
+          <span class="skill-badge">JIRA</span>
+          <span class="skill-badge">To Do</span>
+        </div>
+      </div>
+
+      <!-- Circuit Design -->
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-drafting-compass mr-2"></i>PCB Design & Prototyping
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">Schematic Capture</span>
+          <span class="skill-badge">Layout, DRC/ERC</span>
+          <span class="skill-badge">BOM, Gerber Generation</span>
+          <span class="skill-badge">EasyEDA</span>
+          <span class="skill-badge">Fusion 360</span>
+        </div>
+      </div>
+
+      <!-- Sensors & Modules -->
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-satellite-dish mr-2"></i>Sensors & Modules
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">Temperature, Soil, Hall, ECG</span>
+          <span class="skill-badge">Motors, Solenoids</span>
+          <span class="skill-badge">GPS, GSM, RTC</span>
+        </div>
+      </div>
+
+      <!-- Power -->
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-battery-three-quarters mr-2"></i>Power Management
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">BQ Charger ICs</span>
+          <span class="skill-badge">Fuel Gauge (bq28zxx)</span>
+          <span class="skill-badge">Buck/Boost Converters</span>
+        </div>
+      </div>
+
+      <!-- IoT Platforms -->
+      <div data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-accent mb-4">
+          <i class="fas fa-cloud mr-2"></i>IoT Platforms
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="skill-badge">Firebase</span>
+          <span class="skill-badge">ThingSpeak</span>
+          <span class="skill-badge">Adafruit IO</span>
+          <span class="skill-badge">Blynk</span>
+          <span class="skill-badge">IFTTT</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+      <section id="experience" class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12" data-aos="fade-up">
+      Experience
+    </h2>
+
+    <div class="space-y-10">
+
+      <!-- Senior Firmware Engineer -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xl font-semibold text-gray-800">
+            <i class="fas fa-microchip text-accent mr-2"></i>Senior Firmware Engineer
+          </h3>
+          <span class="text-sm text-gray-500 font-medium">Jun 2024 – Present</span>
+        </div>
+        <p class="text-accent font-medium mb-2">BRBS REALITY, Hyderabad</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+          <li>Led firmware development for IoT industrial products, improving power efficiency by 40%.</li>
+          <li>Built real-time sensor fusion algorithms for multi-sensor data acquisition systems.</li>
+          <li>Optimized memory and performance with embedded design patterns.</li>
+          <li>Mentored junior engineers and standardized firmware best practices.</li>
+          <li>Accelerated development by 30% via automated testing workflows.</li>
+        </ul>
+      </div>
+
+      <!-- Embedded Systems Engineer -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xl font-semibold text-gray-800">
+            <i class="fas fa-cogs text-accent mr-2"></i>Embedded Systems Engineer
+          </h3>
+          <span class="text-sm text-gray-500 font-medium">Jun 2019 – May 2024</span>
+        </div>
+        <p class="text-accent font-medium mb-2">Niltech Pvt. Ltd, Hyderabad</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+          <li>Developed firmware for ATMEL, ESP32, and ARM systems across multiple verticals.</li>
+          <li>Successfully rolled out Smart Card Payphone System to 2,500+ sites.</li>
+          <li>Contributed to DRDO & Indian Army systems with secure communication protocols.</li>
+          <li>Implemented robust I2C, SPI, and UART stacks with fail-safe logic.</li>
+          <li>Achieved 95% first-pass yield through hardware/firmware integration testing.</li>
+        </ul>
+      </div>
+
+      <!-- Hardware Test Engineer -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xl font-semibold text-gray-800">
+            <i class="fas fa-vial text-accent mr-2"></i>Hardware Test Engineer
+          </h3>
+          <span class="text-sm text-gray-500 font-medium">May 2015 – Jun 2016</span>
+        </div>
+        <p class="text-accent font-medium mb-2">PGP Technology, Hyderabad</p>
+        <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+          <li>Performed functional testing and validation of custom hardware boards.</li>
+          <li>Created automated test suites to reduce test time by 50%.</li>
+          <li>Documented technical test results and hardware bug reports.</li>
+          <li>Collaborated with R&D teams to ensure hardware quality standards.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="bg-gray-100 py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12" data-aos="fade-up">
+      Gallery
+    </h2>
+
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+      <!-- Image Card -->
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
+        <img src="static/images/rtos.png" alt="RTOS" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="50">
+        <img src="static/images/fingerprintrfid.jpeg" alt="Fingerprint RFID" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+        <img src="static/images/pcbboard.jpeg" alt="PCB Board" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="150">
+        <img src="static/images/homeauto.jpeg" alt="Home Automation" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
+        <img src="static/images/survilancerobot.jpeg" alt="Surveillance Robot" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="50">
+        <img src="static/images/automation_raspi.jpeg" alt="Raspberry Pi Automation" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+        <img src="static/images/batterymang.jpeg" alt="Battery Management" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="150">
+        <img src="static/images/boardai.jpg" alt="AI Controller Board" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
+        <img src="static/images/womensaftey.jpeg" alt="Women Safety Device" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="50">
+        <img src="static/images/xbee.jpeg" alt="XBee Module" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+        <img src="static/images/payphone.jpeg" alt="Smart Payphone" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="150">
+        <img src="static/images/smart_shoe.jpeg" alt="Smart Shoe" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <!-- Contact Section -->
+      <section id="contact" class="bg-gray-100 py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <!-- Section Title -->
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+            Get In Touch
+          </h2>
+
+          <div class="flex flex-col md:flex-row md:space-x-12">
+            <!-- Contact Details -->
+            <div class="md:w-1/2 mb-12 md:mb-0 space-y-6">
+              <div class="flex items-start">
+                <i class="fas fa-phone-alt text-accent text-2xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Phone</h3>
+                  <p class="text-gray-600">+919052089833</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-accent text-2xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Email</h3>
+                  <p class="text-gray-600">nareshpuppala246@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-accent text-2xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Location</h3>
+                  <p class="text-gray-600">Hyderabad, Telangana, India</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="md:w-1/2">
+              <form
+                action="mailto:nareshpuppala246@gmail.com"
+                method="post"
+                enctype="text/plain"
+                class="space-y-6"
+              >
+                <div>
+                  <label for="name" class="block text-gray-700 mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-700 mb-2"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+                  />
+                </div>
+                <div>
+                  <label for="message" class="block text-gray-700 mb-2"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-accent-dark transition"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center">
+      <p>&copy; 2025 Naresh Puppala. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="gallery-modal"
+      class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
+    >
+      <img
+        id="gallery-modal-img"
+        class="max-h-full max-w-full rounded-lg shadow-lg"
+        src=""
+        alt="Enlarged gallery image"
+      />
+      <button
+        id="gallery-modal-close"
+        class="absolute top-6 right-6 text-white text-3xl leading-none"
+      >
+        &times;
+      </button>
+    </div>
+
+    <script>
+      // Gallery lightbox logic
+      document.querySelectorAll(".gallery-item img").forEach((img) => {
+        img.addEventListener("click", () => {
+          const modal = document.getElementById("gallery-modal");
+          const modalImg = document.getElementById("gallery-modal-img");
+          modalImg.src = img.src;
+          modal.classList.remove("hidden");
+        });
+      });
+      document
+        .getElementById("gallery-modal-close")
+        .addEventListener("click", () => {
+          document.getElementById("gallery-modal").classList.add("hidden");
+        });
+    </script>
+
+    <script>
+      const hamburgerButton = document.getElementById("hamburger-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-nav-link"); // Get all links in mobile menu
+
+      hamburgerButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        // Optional: Change hamburger icon to close icon
+        const icon = hamburgerButton.querySelector("svg path");
+        if (!mobileMenu.classList.contains("hidden")) {
+          // Menu is open, show close icon (example)
+          icon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+        } else {
+          // Menu is closed, show hamburger icon
+          icon.setAttribute("d", "M4 6h16M4 12h16m-7 6h7");
+        }
+      });
+
+      // Add event listener to each mobile nav link to close the menu on click
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          // Reset icon to hamburger when a link is clicked
+          const icon = hamburgerButton.querySelector("svg path");
+          icon.setAttribute("d", "M4 6h16M4 12h16m-7 6h7");
+        });
+      });
+
+      // Optional: Close mobile menu if clicking outside of it
+      // document.addEventListener('click', (event) => {
+      //    const isClickInsideMenu = mobileMenu.contains(event.target);
+      //    const isClickOnHamburger = hamburgerButton.contains(event.target);
+      //    if (!isClickInsideMenu && !isClickOnHamburger && !mobileMenu.classList.contains('hidden')) {
+      //       mobileMenu.classList.add('hidden');
+      //         const icon = hamburgerButton.querySelector('svg path');
+      //         icon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+      //    }
+      // });
+    </script>
+    <!-- Add before </body> -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,      // animation duration
+    once: true,         // animation happens only once
+    offset: 100         // trigger point
+  });
+</script>
+
+  </body>
+</html>
