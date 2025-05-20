@@ -547,51 +547,51 @@ Designed a prepaid GSM payphone system for remote areas. Users authenticate with
 
       <!-- Image Card -->
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
-        <img src="static/images/rtos.png" alt="RTOS" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/rtos.png" alt="RTOS" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="50">
-        <img src="static/images/fingerprintrfid.jpeg" alt="Fingerprint RFID" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/fingerprintrfid.jpeg" alt="Fingerprint RFID" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-        <img src="static/images/pcbboard.jpeg" alt="PCB Board" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/pcbboard.jpeg" alt="PCB Board" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="150">
-        <img src="static/images/homeauto.jpeg" alt="Home Automation" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/homeauto.jpeg" alt="Home Automation" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
-        <img src="static/images/Sensor_Data.png" alt="Surveillance Robot" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/Sensor_Data.png" alt="Surveillance Robot" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="50">
-        <img src="static/images/automation_raspi.jpeg" alt="Raspberry Pi Automation" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/automation_raspi.jpeg" alt="Raspberry Pi Automation" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-        <img src="static/images/batterymang.jpeg" alt="Battery Management" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/batterymang.jpeg" alt="Battery Management" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="150">
-        <img src="static/images/gsm.jpeg" alt="AI Controller Board" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/gsm.jpeg" alt="AI Controller Board" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
-        <img src="static/images/womensaftey.jpeg" alt="Women Safety Device" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/womensaftey.jpeg" alt="Women Safety Device" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="50">
-        <img src="static/images/xbee.jpeg" alt="XBee Module" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/xbee.jpeg" alt="XBee Module" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-        <img src="static/images/payphone.jpeg" alt="Smart Payphone" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/payphone.jpeg" alt="Smart Payphone" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="150">
-        <img src="static/images/smart_shoe.jpeg" alt="Smart Shoe" class="w-full h-60 object-cover hover:scale-105 transform transition duration-300">
+        <img src="static/images/smart_shoe.jpeg" alt="Smart Shoe" class="w-full h-80 object-cover hover:scale-105 transform transition duration-300 cursor-pointer"onclick="openLightbox(this.src)">
       </div>
 
     </div>
@@ -782,6 +782,23 @@ Designed a prepaid GSM payphone system for remote areas. Users authenticate with
     offset: 100         // trigger point
   });
 </script>
+
+    <script>
+  function openLightbox(src) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxModal').classList.remove('hidden');
+  }
+  function closeLightbox() {
+    document.getElementById('lightboxModal').classList.add('hidden');
+    document.getElementById('lightboxImg').src = "";
+  }
+</script>
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <span class="absolute top-8 right-8 text-white text-4xl cursor-pointer" onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImg" src="" class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-lg" />
+</div>
 
   </body>
 </html>
